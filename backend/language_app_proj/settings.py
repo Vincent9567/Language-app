@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'language_app_proj.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -80,7 +81,7 @@ WSGI_APPLICATION = 'language_app_proj.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "language_db",
+        "NAME": "language_app_db",
         "USER": "postgres",
         "PASSWORD": "postgres",
         "HOST": "db",  

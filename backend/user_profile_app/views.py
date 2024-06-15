@@ -30,14 +30,15 @@ class AllUserProfiles(APIView):
 class SelectedUserProfile(APIView):
 
     def get_user_profile(self, id):
-    
-        if type(id) == int:
-            return UserProfile.objects.get(id=id)
-        else:
-            return UserProfile.objects.get(user_name = id)
+        try:
+            if type(id) == int:
+                return UserProfile.objects.get(id=id)
+            else:
+                return UserProfile.objects.get(user_name = id)
+        except UserProfile.DoesNotExist:
+            return None
         
     def get(self, request, id):
-
         selected_user = self.get_user_profile(id)
         selected_user_serialized = UserProfileSerializer(selected_user, many=False)
         return Response(selected_user_serialized.data)

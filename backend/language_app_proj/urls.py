@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('api/admin/', admin.site.urls),
     path('api/flashcards/', include('flashcard_app.urls')),
     path('api/languages/', include('target_language_app.urls')),
     path('api/userprofiles/', include('user_profile_app.urls')),

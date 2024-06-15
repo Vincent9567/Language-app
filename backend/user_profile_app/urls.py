@@ -9,3 +9,4 @@ urlpatterns = [
     path('', AllUserProfiles.as_view(), name='all_user_profiles'),
     path('<int_or_str:id>/', SelectedUserProfile.as_view(), name='selected_user_profile'),
 ]
+

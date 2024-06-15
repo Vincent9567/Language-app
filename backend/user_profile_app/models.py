@@ -9,6 +9,7 @@ from target_language_app.models import TargetLanguage
 class UserProfile(models.Model):
 
     user_name = models.CharField(max_length=255, unique = True, blank = False, validators=[validate_name])
+    password = models.CharField(max_length=255, null=True)
     user_email = models.EmailField(unique = True, blank= False)
     target_language_id = models.ForeignKey(TargetLanguage, on_delete=models.CASCADE, null=True)
     target_language = models.CharField(max_length=255)

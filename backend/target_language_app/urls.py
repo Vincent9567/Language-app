@@ -2,7 +2,7 @@ from django.urls import path, register_converter
 from .views import AllTargetLanguages, SelectedTargetLanguage
 from .converters import IntOrStrConverter
 
-# Remember all urls are prefaced by http://localhost:8000/api/v1/languages/
+# Remember all urls are prefaced by http://localhost:8080/api/languages/
 
 register_converter(IntOrStrConverter, 'int_or_str')
 

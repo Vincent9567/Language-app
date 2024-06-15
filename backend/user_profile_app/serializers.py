@@ -9,7 +9,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = UserProfile
-        fields = ('id','user_name', 'user_email', 'target_language_id', 'target_language', 'native_language', 'active_cards', 'words_learned')
+        fields = ('id','user_name','password', 'user_email', 'target_language_id', 'target_language', 'native_language', 'active_cards', 'words_learned')
         
     def to_internal_value(self, data):
         if isinstance(data, dict):
@@ -18,6 +18,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
                 return {
                     'id': user.id,
                     'user_name': user.user_name,
+                    'password': user.password,
                     'user_email': user.user_email,
                     'target_language_id': user.target_language_id.id,
                     'target_language': user.target_language,
