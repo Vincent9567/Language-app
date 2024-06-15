@@ -1,0 +1,25 @@
+.parent-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+}
+
+.createCard-Container {
+    flex: 1; /* Take the remaining space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px; /* Same as the sidebar width to avoid overlap */
+    padding: 20px; /* Example padding, adjust as needed */
+    width: 300px; /* example width */
+    height: 800px; /* example height */
+}
+
+.sidebar {
+    flex: 0 0 250px; /* Sidebar takes fixed width, adjust as needed */
+    height: 100vh; /* Full height */
+    background-color: #f8f9fa; /* Example background color */
+    border-right: 1px solid #dee2e6; /* Example border, adjust as needed */
+    position: fixed; /* Keep it fixed to the left side */
+}
+

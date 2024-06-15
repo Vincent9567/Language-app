@@ -1,0 +1,26 @@
+.createCard-container{
+    position: abs; /* or absolute if necessary */
+    width: 300px; /* example width */
+    height: 300px; /* example height */
+    background-color: #eeeeee; /* example background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* example shadow */
+    border-radius: 8px; /* example rounded corners */
+    padding: 20px; /* example padding */
+    border: solid 2px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-container {
+    margin-top: 70px; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+}
+
+.create-card {
+    margin-bottom: 50px; /* Optional: Add some margin at the bottom */
+}
